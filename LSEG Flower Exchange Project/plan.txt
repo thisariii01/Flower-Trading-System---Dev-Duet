@@ -1,0 +1,33 @@
+classes
+// order reader - reads the orders from the csv file return a vector string with orders
+
+
+// validator - gets the order line by line and validates the order and returns the reject status
+
+order book - if empty , addto - to add orders , delete - to delete orders
+sell order book -  inherit order book min heap --> get min , make a min heap all the time
+buy order book - inherit order book max heap --> if empty, get max , make a max heap all the time
+
+trader - gets the valid order checks the relevant order books and updates the order books
+
+//timestamp generator
+execution report generator - generates execution report
+
+
+process
+stage 1
+read the orders from the csv file 
+stage 2
+check for their validity and remove invalid orders and add them to execution report
+and divide into seperate order sets accroding to flower make flowers
+
+stage 3 threading
+each order book
+    get line by line check for buy or sell order
+        execute the operation accrodingly
+        add to execution report
+    if not complete
+            put to min max heap of the respective flower
+
+
+OrderReader  All order vec vec string -> for loop line by line validator,order seperator -> for loop line by line order processor  
