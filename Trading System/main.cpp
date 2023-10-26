@@ -63,6 +63,7 @@ int main()
     {
         fout << *it << endl;
     }
+    
     fout.close();
     flower_order.printOrderBook(); // printing the order book
 }
